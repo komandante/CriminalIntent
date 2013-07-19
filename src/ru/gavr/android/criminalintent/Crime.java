@@ -1,6 +1,7 @@
 package ru.gavr.android.criminalintent;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -9,9 +10,12 @@ import java.util.UUID;
 public class Crime implements Serializable{
     private UUID mId;
     private String mTitle;
+    private Date mDate;
+    private boolean mSolved;
 
     public Crime() {
         this.mId = UUID.randomUUID();
+        this.mDate = new Date();
     }
 
     public UUID getId() {
@@ -24,5 +28,17 @@ public class Crime implements Serializable{
 
     public void setTitle(String mTitle) {
         this.mTitle = mTitle;
+    }
+
+    public Date getDate() {
+        return mDate;
+    }
+
+    public boolean isSolved() {
+        return mSolved;
+    }
+
+    public void setSolved(boolean mSolved) {
+        this.mSolved = mSolved;
     }
 }
