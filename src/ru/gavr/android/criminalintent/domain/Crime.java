@@ -1,4 +1,4 @@
-package ru.gavr.android.criminalintent;
+package ru.gavr.android.criminalintent.domain;
 
 import java.io.Serializable;
 import java.util.Date;
