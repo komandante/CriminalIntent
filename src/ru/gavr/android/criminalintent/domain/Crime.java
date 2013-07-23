@@ -41,4 +41,9 @@ public class Crime implements Serializable{
     public void setSolved(boolean mSolved) {
         this.mSolved = mSolved;
     }
+
+    @Override
+    public String toString() {
+        return mTitle;
+    }
 }
