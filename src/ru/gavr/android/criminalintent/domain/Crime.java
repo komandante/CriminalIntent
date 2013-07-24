@@ -34,6 +34,10 @@ public class Crime implements Serializable{
         return mDate;
     }
 
+    public void setDate(Date date) {
+        this.mDate = date;
+    }
+
     public boolean isSolved() {
         return mSolved;
     }
