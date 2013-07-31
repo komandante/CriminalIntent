@@ -57,6 +57,8 @@ public class CrimeListFragment extends ListFragment {
         }
     }
 
+
+
     private class CrimeAdapter extends ArrayAdapter<Crime> {
         private CrimeAdapter(List<Crime> crimes) {
             super(getActivity(), 0, crimes);
