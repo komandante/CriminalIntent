@@ -15,6 +15,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CrimePagerActivity" >
+            <meta-data android:name="android:support.PARENT_ACTIVITY" android:value=".CrimeListActivity"/>
         </activity>
     </application>
 </manifest>

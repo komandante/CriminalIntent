@@ -19,17 +19,6 @@ public class CrimeLab {
         this.mAppContext = appContext;
         this.mCrimes = new ArrayList<>();
         mCrimesMap = new HashMap<>();
-        fillCrimes();
-    }
-
-    private void fillCrimes() {
-        for (int i = 0; i < 100; i++) {
-            Crime c = new Crime();
-            c.setTitle("Crime #" + i);
-            c.setSolved(i % 2 == 0);
-            mCrimes.add(c);
-            mCrimesMap.put(c.getId(), c);
-        }
     }
 
     public static CrimeLab get(Context c) {
@@ -37,6 +26,11 @@ public class CrimeLab {
             sCrimeLab = new CrimeLab(c);
         }
         return sCrimeLab;
+    }
+
+    public void addCrime(Crime crime) {
+        mCrimes.add(crime);
+        mCrimesMap.put(crime.getId(), crime);
     }
 
     public List<Crime> getCrimes() {
